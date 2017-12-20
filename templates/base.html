@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Terry Corte Photography</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Terry Corte's photography site" />
+	<meta name="keywords" content="terry corte, terry, corte, photography" />
+	<meta name="author" content="Christian Cecilia" />
+
+  <!-- 
+	//////////////////////////////////////////////////////
+
+	FREE HTML5 TEMPLATE 
+	DESIGNED & DEVELOPED by FreeHTML5.co
+		
+	Website: 		http://freehtml5.co/
+	Email: 			info@freehtml5.co
+	Twitter: 		http://twitter.com/fh5co
+	Facebook: 		https://www.facebook.com/fh5co
+
+	//////////////////////////////////////////////////////
+	 -->
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content="Terry Corte Photography"/>
+	<meta property="og:image" content="{% static 'images/terry_profile.jpg' %}"/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content="Terry Corte Photography"/>
+	<meta property="og:description" content="Terry Corte's photography site"/>
+	<meta name="twitter:title" content="Terry Corte" />
+	<meta name="twitter:image" content="{% static 'images/terry_profile.jpg' %}" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="{% static 'images/camera.ico' %}">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+	<!-- fontaxesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="{% static 'css/animate.css' %}">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+	<!-- Modernizr JS -->
+	<script src="{% static 'js/modernizr-2.6.2.min.js' %}"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	</head>
+	<body>
+		<div id="fh5co-page">
+			<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
+			<aside id="fh5co-aside" role="complementary" class="border js-fullheight">
+
+				<h1 id="fh5co-logo">
+					<a href="/">
+						<img src="{% static 'images/heart-logo-962x1024.png' %}" width="100px" height="auto" alt="Terry Corte">
+					</a>
+				</h1>
+				<nav id="fh5co-main-menu" role="navigation">
+					<ul>
+						<li {% if page == 'index' %}class="fh5co-active"{% endif %}>
+							<a href="{% url 'index' %}">Home</a>
+						</li>
+						<li {% if page == 'portfolio' %}class="fh5co-active"{% endif %}>
+							<a href="{% url 'portfolio' %}">Photos</a>
+						</li>
+						<li {% if page == 'about' %}class="fh5co-active"{% endif %}>
+							<a href="{% url 'about' %}">About</a>
+						</li>
+						<li {% if page == 'contact' %}class="fh5co-active"{% endif %}>
+							<a href="{% url 'contact' %}">Contact</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="fh5co-footer">
+					<p>
+						<small>
+							<span>&copy; TerryCorte</span> 
+							<span>Designed by <a href="http://freehtml5.co/" target="_blank">FreeHTML5.co</a> </span> 
+							<span>Demo Images: <a href="http://pexels.com/" target="_blank">Pexels</a></span>
+							<span>Built By: <a href="http://christiancecilia.us-east-1.elasticbeanstalk.com/" target="_blank">Christian Cecilia</a></span>
+						</small>
+					</p>
+					<ul>
+						<li><a href="https://www.facebook.com/terry.stingercorte" target="_blank"><i class="icon-facebook"></i></a></li>
+						<li><a href="#"><i class="icon-twitter" target="_blank"></i></a></li>
+						<li><a href="https://www.instagram.com/xcorx97/" target="_blank"><i class="icon-instagram"></i></a></li>
+						<li><a href="https://www.linkedin.com/in/terry-corte-63587811/" target="_blank"><i class="icon-linkedin"></i></a></li>
+					</ul>
+				</div>
+
+			</aside>
+	{% block content %}
+
+		{% block subcontent %}
+			<div class="fh5co-narrow-content">
+				<div class="row">
+					<div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
+						<h1 class="fh5co-heading-colored">Get in touch</h1>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+						<p class="fh5co-lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sollicitudin faucibus lobortis.</p>
+						<p><a href="#" class="btn btn-primary btn-outline">Learn More</a></p>
+					</div>
+					
+				</div>
+			</div>
+		{% endblock %}
+	{% endblock %}
+
+
+	<!-- jQuery -->
+	<script src="{% static 'js/jquery.min.js' %}"></script>
+	<!-- jQuery Easing -->
+	<script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+	<!-- Bootstrap -->
+	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+	<!-- Carousel -->
+	<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+	<!-- Stellar -->
+	<script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+	<!-- Waypoints -->
+	<script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+	<!-- Counters -->
+	<script src="{% static 'js/jquery.countTo.js' %}"></script>
+	
+	
+	
+	<!-- MAIN JS -->
+	<script src="{% static 'js/main.js' %}"></script>
+
+	</body>
+</html>
